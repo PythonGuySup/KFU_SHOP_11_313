@@ -23,7 +23,7 @@
   <p align="center">
     Online sneaker store
     <br />
-    <a href="https://github.com/PythonGuySup/Pp-Web-application-KFU_SHOP-11-313/docs"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/PythonGuySup/KFU_SHOP_11_313/tree/master/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/PythonGuySup/Pp-Web-application-KFU_SHOP-11-313">View Demo</a>
