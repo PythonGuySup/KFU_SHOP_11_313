@@ -68,7 +68,7 @@
 ## About The Project
 
 [![KFU_SHOP_EXAMPLE][product-screenshot]](https://example.com)
-
+п
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
