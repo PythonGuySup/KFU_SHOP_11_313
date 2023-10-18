@@ -109,7 +109,6 @@ Download Django
     cd scripts
     ```
 3. Execute manage.py
-4. 
    ```sh
    python3 manage.py {args}
    ```
