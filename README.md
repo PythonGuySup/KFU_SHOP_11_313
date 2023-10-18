@@ -14,7 +14,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/PythonGuySup/Pp-Web-application-KFU_SHOP-11-313">
+  <a href="https://github.com/PythonGuySup/KFU_SHOP_11_313">
     <img src="images/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
@@ -26,11 +26,11 @@
     <a href="https://github.com/PythonGuySup/KFU_SHOP_11_313/tree/master/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/PythonGuySup/Pp-Web-application-KFU_SHOP-11-313">View Demo</a>
+    <a href="https://example.com">View Demo</a>
     ·
-    <a href="https://github.com/PythonGuySup/Pp-Web-application-KFU_SHOP-11-313">Report Bug</a>
+    <a href="https://github.com/PythonGuySup/KFU_SHOP_11_313/pulls">Report Bug</a>
     ·
-    <a href="https://github.com/PythonGuySup/Pp-Web-application-KFU_SHOP-11-313">Request Feature</a>
+    <a href="https://github.com/PythonGuySup/KFU_SHOP_11_313/pulls">Request Feature</a>
   </p>
 </div>
 
@@ -131,7 +131,7 @@ With our web application you can sell sneakers online
 
 
 
-See the [open issues](https://github.com/PythonGuySup/Pp-Web-application-KFU_SHOP-11-313/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/PythonGuySup/KFU_SHOP_11_313/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,7 +167,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Sasha Kachanov(also known as Egor) - [@koioes](https://twitter.com/twitter_handle) - egorkachanov2006@gmail.com
+
+1. Project Head: Vadim Filippov Evgenevich - [@AksiLipe](https://t.me/AksiLipe) - Fill.123filippov@mail.ru
+2. Valiullin Bulat Rustemovich - [@ILGAMBIK](https://t.me/ILGAMBIK) - ilhambikmaev110@gmail.com
+3. Danila Tsigelnikov Alekseevich - [@tsigel24](https://t.me/tsigel24) - danila.tsigelnikov@mail.ru
+4. Ilgam Isliamovich Bikmaev - [@Bulat1893](https://t.me/Bulat1893) - enot46161@gmail.com
+5. Repository owner: Sasha Romanov Kachanov(also known as Egor) they - [@koioes](https://t.me/koioes) - egorkachanov2006@gmail.com
+
 
 Project Link: [https://github.com/PythonGuySup/KFU_SHOP_11_313](https://github.com/PythonGuySup/KFU_SHOP_11_313)
 
@@ -203,5 +209,3 @@ Project Link: [https://github.com/PythonGuySup/KFU_SHOP_11_313](https://github.c
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [Django.com]: https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white
-
-
