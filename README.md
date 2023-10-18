@@ -102,11 +102,16 @@ Download Django
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/PythonGuySup/Pp-Web-application-KFU_SHOP-11-313.git
+   git clone https://github.com/PythonGuySup/KFU_SHOP_11_313.git
    ```
-2. Execute main.py
+2. Cd into the scripts folder
+    ```sh
+    cd scripts
+    ```
+3. Execute manage.py
+4. 
    ```sh
-   python3 main.py {args}
+   python3 manage.py {args}
    ```
 
 
