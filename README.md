@@ -169,7 +169,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Sasha Kachanov(also known as Egor) - [@koioes](https://twitter.com/twitter_handle) - egorkachanov2006@gmail.com
 
-Project Link: [https://github.com/PythonGuySup/Pp-Web-application-KFU_SHOP-11-313](https://github.com/PythonGuySup/Pp-Web-application-KFU_SHOP-11-313)
+Project Link: [https://github.com/PythonGuySup/KFU_SHOP_11_313](https://github.com/PythonGuySup/KFU_SHOP_11_313)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
