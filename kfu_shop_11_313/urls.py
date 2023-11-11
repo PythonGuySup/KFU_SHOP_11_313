@@ -1,5 +1,5 @@
 """
-URL configuration for src project.
+URL configuration for kfu_shop_11_313 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from demo import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('home/', views.home_page),
+    path('', views.home_page, name = 'home'),
+    path('shop/', views.shop_page, name = 'shop')
 ]
