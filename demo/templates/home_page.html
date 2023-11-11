@@ -1,0 +1,20 @@
+<!-- main_page.html -->
+
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <title>Интернет-магазин кроссов КФУ</title>
+</head>
+<body>
+
+<div style="text-align: center;">
+    <h1>Интернет-магазин кроссов КФУ</h1>
+    <img src="{% static 'cross_photo.jpg' %}" alt="Кроссовок">
+    <h2> <a href="{% url 'shop' %}"><button>к покупкам</button></a>
+    </h2>
+    <br>
+</div>
+
+</body>
+</html>
