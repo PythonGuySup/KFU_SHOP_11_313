@@ -91,26 +91,21 @@
 There should have been text here but we haven't done anything yet
 
 ### Prerequisites
+*  Download python 3.11 or later
 
-Download Django
-* pip
-  ```sh
-  pip install django
-  ```
-
-### Installation
+### Installation and Running
 
 1. Clone the repo
    ```sh
    git clone https://github.com/PythonGuySup/KFU_SHOP_11_313.git
    ```
-2. Cd into the scripts folder
+2. Install modules from requirements.txt
     ```sh
-    cd scripts
+   pip install -r requirements.txt
     ```
-3. Execute manage.py
+3. Execute runserver command (only for development)
    ```sh
-   python3 manage.py {args}
+   python3 manage.py runserver
    ```
 
 
