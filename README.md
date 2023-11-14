@@ -168,10 +168,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 1. Project Head: Vadim Filippov Evgenevich - [@AksiLipe](https://t.me/AksiLipe) - Fill.123filippov@mail.ru
-2. Valiullin Bulat Rustemovich - [@ILGAMBIK](https://t.me/ILGAMBIK) - ilhambikmaev110@gmail.com
+2. Ilgam Bikmaev Isliamovich - [@ILGAMBIK](https://t.me/ILGAMBIK) - ilhambikmaev110@gmail.com
 3. Danila Tsigelnikov Alekseevich - [@tsigel24](https://t.me/tsigel24) - danila.tsigelnikov@mail.ru
-4. Ilgam Isliamovich Bikmaev - [@Bulat1893](https://t.me/Bulat1893) - enot46161@gmail.com
-5. Repository owner: Sasha Romanov Kachanov(also known as Egor) they - [@koioes](https://t.me/koioes) - egorkachanov2006@gmail.com
+4. Bulat Valiullin Rustemovich - [@Bulat1893](https://t.me/Bulat1893) - enot46161@gmail.com
+5. Repository owner: Sasha Kachanov Romanovich(also known as Egor) they - [@koioes](https://t.me/koioes) - egorkachanov2006@gmail.com
 
 
 Project Link: [https://github.com/PythonGuySup/KFU_SHOP_11_313](https://github.com/PythonGuySup/KFU_SHOP_11_313)
