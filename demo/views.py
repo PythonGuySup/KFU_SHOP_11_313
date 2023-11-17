@@ -5,4 +5,4 @@ def home_page(request):
     return render(request, "home_page.html")
 
 def shop_page(request):
-    return HttpResponse("<h1>Здесь пока пусто<h1>")
+    return HttpResponse("<reh1>Здесь пока пусто<h1>")

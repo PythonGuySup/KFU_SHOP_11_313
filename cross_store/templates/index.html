@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>KFU CROSS - интернет-магазин спортивной обуви от КФУ.</title>
+    {% load static %}
+    <link href="{% static 'assets\plugins\bootstrap\css\bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\plugins\fontawesome\css\font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\plugins\bootstrap-select\bootstrap-select.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\plugins\owlcarousel2\assets\owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\plugins\owlcarousel2\assets\owl.theme.default.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\plugins\prettyphoto\css\prettyPhoto.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\plugins\countdown\jquery.countdown.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\css\style.css' %}" rel="stylesheet">
+
+</head>
+<body id="home" class="wide">
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="preloader-status">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        <div id="preloader-title">Идет загрузка...</div>
+    </div>
+</div>
+
+<!-- Обертка -->
+<div class="wrapper">
+
+    <!-- Окно с заказом и регистрацией -->
+    <div class="modal fade popup-checkout" id="popup-checkout" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрыть</span></button>
+            <h4 class="modal-title">Оплатить</h4>
+        </div>
+
+        <div class="modal-body">
+        <section>
+
+            <h3 class="block-title">Для заказа и оплаты услуг требуется авторизация</h3>
+            <p>Чтобы войти в свой аккаунт, заполните поле "Логин" и "Пароль" ниже по форме.</p>
+            <form action="#" method="post" class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="login-email">Логин</label>
+                        <input id="login-email" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="login-password">Пароль</label>
+                        <input id="login-password" type="password" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <a class="btn btn-theme" href="#">Войти</a>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <a class="link" href="#">Забыли пароль?</a>
+                </div>
+            </form>
+
+        </section>
+
+        <section>
+
+            <form action="#" method="post">
+            <section class="address">
+
+                <h3 class="block-title">Заполните Ваши данные</h3>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group"><label>Страна</label></div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="form-group selectpicker-wrapper">
+                            <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
+                                <option>Выбор страны</option>
+                                <option>Россия</option>
+                                <option>Украина</option>
+                                <option>Белорусь</option>
+                                <option>Казахстан</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group"><label>Имя</label></div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="form-group"><input type="text" class="form-control"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group"><label>Фамилия</label></div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="form-group"><input type="text" class="form-control"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group"><label>Город\поселок</label></div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="form-group"><input type="text" class="form-control"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group"><label>Улица, дом</label></div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="form-group"><input type="text" class="form-control"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group"><label>Индекс</label></div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="form-group"><input type="text" class="form-control"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group"><label>E-mail</label></div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="form-group"><input type="text" class="form-control"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group"><label>Телефон</label></div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="form-group"><input type="text" class="form-control"></div>
+                    </div>
+                </div>
+
+            </section>
+            <section>
+
+                <div class="form-group">
+                    <label><input type="checkbox"> У меня нет аккаунта</label>
+                    <p>Если у Вас еще нет аккаунта на нашем сайте, то рекомендуем Вам создать его прямо сейчас!</p>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>Пароль</label>
+                    <input type="password" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>Еще раз пароль</label>
+                    <input type="password" class="form-control">
+                </div>
+
+            </section>
+            <section>
+
+                <h3 class="block-title">Комментарий к заказу</h3>
+                <div class="form-group">
+                    <textarea cols="30" rows="10" class="form-control"></textarea>
+                </div>
+
+            </section>
+            <section>
+
+                <h3 class="block-title">Ваш заказ</h3>
+                <table class="table order">
+                    <thead>
+                    <tr>
+                        <th>Товар</th>
+                        <th>Стоимость</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Отличные кроссовки ТОП фирмы</td>
+                        <td>5 000.00 р.</td>
+                    </tr>
+                    <tr class="subtotal">
+                        <td>Сумма по товарам</td>
+                        <td><strong>5 000.00 р.</strong></td>
+                    </tr>
+                    <tr class="shipping">
+                        <td>Доставка</td>
+                        <td><strong>Самовывоз</strong></td>
+                    </tr>
+                    <tr class="total">
+                        <td>Итого к оплате</td>
+                        <td class="price"><strong>5 000.00 р.</strong></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+            </section>
+            <section>
+            <h3 class="block-title">Выбор варианта оплаты</h3>
+                <div class="form-group">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                            Через банк
+                        </label>
+                        <p>Оплата заказа с помощью услуг банка.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            Через VISA\MasterCard
+                        </label>
+                        <p>Оплата через платежные системы любого банка.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                            Яндекс.Деньги
+                        </label>
+                        <p>Оплата через Яндекс.Деньги</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios4" value="option3">
+                            WebMoney
+                        </label>
+                        <p>Оплата через WebMoney</p>
+                    </div>
+                </div>
+
+            </section>
+            </form>
+
+        </section>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-theme" data-dismiss="modal">Отменить</button>
+            <button type="button" class="btn btn-theme btn-theme-red">Оплата</button>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <!-- /Окно с заказом и регистрацией -->
+
+    <!-- Окно с корзиной -->
+    <div class="modal fade popup-cart" id="popup-cart" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="container">
+                <div class="cart-items">
+                    <div class="cart-items-inner">
+                        <div class="media">
+                            <a class="pull-left" href="#"><img class="media-object item-image" src="{% static 'assets\img\preview\shop\basket-1.jpg' %}" alt=""></a>
+                            <p class="pull-right item-price">5 000.00 р.</p>
+                            <div class="media-body">
+                                <h4 class="media-heading item-title"><a href="#">Кроссовки | 1 шт.</a></h4>
+                                <p class="item-desc">Описание товара</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <p class="pull-right item-price">5 000.00 р.</p>
+                            <div class="media-body">
+                                <h4 class="media-heading item-title summary">К оплате</h4>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-body">
+                                <div>
+                                    <a href="#" class="btn btn-theme btn-theme-transparent" data-dismiss="modal">Закрыть</a>
+                                    <a href="#" class="btn btn-theme btn-call-checkout" data-dismiss="modal" data-toggle="modal" data-target="#popup-checkout">Оплата</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Окно с корзиной -->
+
+    <!-- Форма входа -->
+    <div class="modal fade popup-login" id="popup-login" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрыть</span></button>
+                    <h4 class="modal-title">Вход</h4>
+                </div>
+                <div class="modal-body">
+                    <section>
+                        <form action="#" method="post" class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="popup-login-email">Email</label>
+                                    <input id="popup-login-email" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="popup-login-password">Пароль</label>
+                                    <input id="popup-login-password" type="password" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <label><input type="checkbox"> Запомнить меня</label> <br class="clear">
+                                <a class="link" href="#">Забыли пароль?</a>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-theme" data-dismiss="modal">Войти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Форма входа -->
+
+    <!-- Верхняя линия -->
+    <div class="top-line">
+        <div class="container">
+            <ul class="top-line-navigation">
+                <li><a href="shop.html">Магазин</a></li>
+                <li><a href="blog.html">Новости</a></li>
+            </ul>
+            <ul class="top-line-user-menu">
+                <li><a href="#" data-toggle="modal" data-target="#popup-login">Вход</a></li>
+                <li><a href="#">Регистрация</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /Верхняя линия -->
+
+    <!-- Шапка -->
+    <header class="header header-sticky">
+        <div class="container">
+            <div class="header-wrapper clearfix">
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#home" class="scroll-to">
+                    <span class="fa-stack">
+                        <i class="fa fa-stack-2x logo-bg"></i>
+                        <i class="fa fa-stack-1x logo-fa fa-globe"></i>
+                    </span>
+                    <span class="logo-text">KFU CROSS</span>
+                    <small>интернет-магазин КФУ</small>
+                </a>
+            </div>
+            <!-- /Logo -->
+
+            <!-- Mobile menu toggle button-->
+            <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
+            <!-- /Mobile menu toggle button-->
+
+            <!-- Cart -->
+            <div id="cart-wrapper" class="cart-wrapper pull-right">
+                <div class="cart-total" data-toggle="modal" data-target="#popup-cart">
+                    <span class="total"><span class="value">5 000.00 р</span></span>
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="items">(1)</span>
+                </div>
+            </div>
+            <!-- /Cart -->
+
+            <!-- Navigation -->
+            <nav class="navigation closed clearfix">
+                <a href="#" class="menu-toggle-close btn"><i class="fa fa-times"></i></a>
+                <ul class="sf-menu nav">
+                    <li class="active"><a href="index.html">Главная</a></li>
+                    <li><a href="#features">Услуги</a></li>
+                    <li><a href="#about">Предложения</a></li>
+                    <li class="megamenu">
+                        <a href="#category">Категории</a>
+                        <ul>
+                            <li class="row">
+                                <!---->
+                                <div class="col-md-2">
+                                    <h4 class="block-title">Женская обувь</h4>
+                                    <ul>
+                                        <li><a href="#">Категории №1</a></li>
+                                        <li><a href="#">Категории №2</a></li>
+                                        <li><a href="#">Категории №3</a></li>
+                                        <li><a href="#">Категории №4</a></li>
+                                        <li><a href="#">Категории №5</a></li>
+                                        <li><a href="#">Категории №6</a></li>
+                                        <li><a href="#">Категории №7</a></li>
+                                        <li><a href="#">Категории №8</a></li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <!---->
+                                <div class="col-md-2">
+                                    <h4 class="block-title">Мужская обувь</h4>
+                                    <ul>
+                                        <li><a href="#">Категории №1</a></li>
+                                        <li><a href="#">Категории №2</a></li>
+                                        <li><a href="#">Категории №3</a></li>
+                                        <li><a href="#">Категории №4</a></li>
+                                        <li><a href="#">Категории №5</a></li>
+                                        <li><a href="#">Категории №6</a></li>
+                                        <li><a href="#">Категории №7</a></li>
+                                        <li><a href="#">Категории №8</a></li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <!---->
+                                <div class="col-md-2">
+                                    <h4 class="block-title">Детская обувь</h4>
+                                    <ul>
+                                        <li><a href="#">Категории №1</a></li>
+                                        <li><a href="#">Категории №2</a></li>
+                                        <li><a href="#">Категории №3</a></li>
+                                        <li><a href="#">Категории №4</a></li>
+                                        <li><a href="#">Категории №5</a></li>
+                                        <li><a href="#">Категории №6</a></li>
+                                        <li><a href="#">Категории №7</a></li>
+                                        <li><a href="#">Категории №8</a></li>
+                                    </ul>
+                                </div>
+                                <!---->
+                                <!---->
+                                <div class="col-md-3">
+                                    <div class="thumbnails category">
+                                        <div class="thumbnail no-border no-padding">
+                                            <div class="media">
+                                                <img src="{% static 'assets\img\preview\shop\category-2.jpg' %}" alt="">
+                                                <div class="caption hovered">
+                                                    <div class="caption-wrapper div-table">
+                                                        <div class="caption-inner div-cell">
+                                                            <p class="caption-view"><a href="#" data-toggle="modal" data-target="#popup-product-view">Подробнее</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption">
+                                                <h3 class="caption-title">Название товара</h3>
+                                            </div>
+                                            <div class="new">Акция!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!---->
+                                <!---->
+                                <div class="col-md-3">
+                                    <div class="thumbnails category">
+                                        <div class="thumbnail no-border no-padding">
+                                            <div class="media">
+                                                <img src="{% static 'assets\img\preview\shop\category-5.jpg' %}" alt="">
+                                                <div class="caption hovered">
+                                                    <div class="caption-wrapper div-table">
+                                                        <div class="caption-inner div-cell">
+                                                            <p class="caption-view"><a href="#" data-toggle="modal" data-target="#popup-product-view">Подробнее</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption">
+                                                <h3 class="caption-title">Название товара</h3>
+                                            </div>
+                                            <div class="new">Акция</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!---->
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#promotions">Акции</a></li>
+                    <li><a href="#contacts">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /Navigation -->
+
+            </div>
+        </div>
+    </header>
+    <!-- /Шапка -->
+
+    <!-- Контент -->
+    <div class="content-area">
+
+        <div id="main">
+        <!-- Слайдер -->
+        <section class="page-section no-padding">
+            <div class="container full-width">
+
+            <div id="main-slider" class="owl-carousel owl-theme">
+
+                <!-- Slide 1 -->
+                <div class="item page slide1">
+                    <img class="slide-img" src="{% static 'assets\img\preview\slider\slide-1.jpg' %}" alt="slide1">
+                    <div class="caption">
+                        <div class="container">
+                            <div class="div-table">
+                            <div class="div-cell">
+                                <div class="caption-content" style="margin:0;">
+                                        <h2 class="caption-title">Адаптивный шаблон сайта для интернет-магазина</h2>
+                                        <h3 class="caption-subtitle">Готовое решение для Ваших проектов!</h3>
+                                        <p class="caption-text">
+                                            <a class="btn btn-theme" href="shop.html">Подробнее</a>
+                                        </p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="item page slide2">
+                    <img class="slide-img" src="{% static 'assets\img\preview\slider\slide-2.jpg' %}" alt="slide2">
+                    <div class="caption">
+                    <div class="container">
+                        <div class="div-table">
+                        <div class="div-cell">
+                            <div class="caption-content"  style="margin:0;">
+                                        <h2 class="caption-title">Адаптивный шаблон сайта для интернет-магазина</h2>
+                                        <h3 class="caption-subtitle">Готовое решение для Ваших проектов!</h3>
+                                        <p class="caption-text">
+                                            <a class="btn btn-theme" href="{% static 'shop.html' %}">Подробнее</a>
+                                        </p>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="item page slide3">
+                    <img class="slide-img" src="{% static 'assets\img\preview\slider\slide-3.jpg' %}" alt="slide3">
+                    <div class="caption">
+                    <div class="container">
+                        <div class="div-table">
+                        <div class="div-cell">
+                            <div class="caption-content">
+                                        <h2 class="caption-title">Адаптивный шаблон сайта для интернет-магазина</h2>
+                                        <h3 class="caption-subtitle">Готовое решение для Ваших проектов!</h3>
+                                        <p class="caption-text">
+                                            <a class="btn btn-theme" href="shop.html">Подробнее</a>
+                                        </p>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </section>
+        <!-- /Слайдер -->
+        </div>
+
+        <section class="page-section color sm-padding">
+            <div class="container">
+                <div class="text-banner">
+                    <span class="relative">
+                        Максимально низкие цены для товаров любых категорий!
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Услуги\предложения -->
+        <section class="page-section" id="features">
+            <div class="container">
+
+                <div class="row thumbnails features">
+                    <div class="col-md-3 col-sm-6 col-xsp-6">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\cat\img-1.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper">
+                                        <div class="caption-inner">
+                                            <h3 class="caption-title">Продажа обуви</h3>
+                                            <p class="caption-text">Описание категории...</p>
+                                            <p class="caption-view"><i class="dot"></i><a href="#">Смотреть еще</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xsp-6">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\cat\img-2.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper">
+                                        <div class="caption-inner">
+                                            <h3 class="caption-title">Лидеры продаж</h3>
+                                            <p class="caption-text">Описание категории...</p>
+                                            <p class="caption-view"><i class="dot"></i><a href="#">Смотреть еще</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xsp-6">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\cat\img-3.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper">
+                                        <div class="caption-inner">
+                                            <h3 class="caption-title">Новинки</h3>
+                                            <p class="caption-text">Описание категории...</p>
+                                            <p class="caption-view"><i class="dot"></i><a href="#">Смотреть еще</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xsp-6">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\cat\img-4.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper">
+                                        <div class="caption-inner">
+                                            <h3 class="caption-title">Обувь под заказ</h3>
+                                            <p class="caption-text">Описание категории...</p>
+                                            <p class="caption-view"><i class="dot"></i><a href="#">Смотреть еще</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- предложения -->
+
+                <div class="section-separator" id="about">
+                    <div class="before"></div>
+                    <div class="after"></div>
+                    <i></i>
+                </div>
+
+                <h1 class="section-title">Наши предложения<small>все услуги действуют в странах СНГ</small></h1>
+
+                <div class="row welcome-list">
+
+                    <div class="col-md-4">
+                        <div class="media">
+                            <div class="pull-left">
+                                <div class="media-object"><i class="fa fa-heart"></i></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Женская обувь</h4>
+                                Выставка порождает имидж предприятия. Медиамикс естественно допускает межличностный принцип восприятия.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <div class="pull-left">
+                                <div class="media-object"><i class="fa fa-user"></i></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Мужская обувь</h4>
+                                Выставка порождает имидж предприятия. Медиамикс естественно допускает межличностный принцип восприятия.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <div class="pull-left">
+                                <div class="media-object"><i class="fa fa-home"></i></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Детская обувь</h4>
+                                Выставка порождает имидж предприятия. Медиамикс естественно допускает межличностный принцип восприятия.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="media">
+                            <div class="pull-left">
+                                <div class="media-object"><i class="fa fa-magic"></i></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Бесплатная доставка</h4>
+                                Выставка порождает имидж предприятия. Медиамикс естественно допускает межличностный принцип восприятия.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <div class="pull-left">
+                                <div class="media-object"><i class="fa fa-plane"></i></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Работаем по всей России</h4>
+                                Выставка порождает имидж предприятия. Медиамикс естественно допускает межличностный принцип восприятия.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <div class="pull-left">
+                                <div class="media-object"><i class="fa fa-check"></i></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Новые коллекции</h4>
+                                Выставка порождает имидж предприятия. Медиамикс естественно допускает межличностный принцип восприятия.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- /Услуги\предложения -->
+
+        <!-- Категории -->
+        <section class="page-section light" id="category">
+            <div class="container">
+
+                <h1 class="section-title">Представялем Вам наши коллекции <small>по самым низким ценам без учета курса доллара</small></h1>
+
+                <div class="clearfix text-center">
+                    <ul id="filtrable" class="filtrable clearfix">
+                        <li class="all current"><a href="#" data-filter="*">Все</a></li>
+                        <li class="dress"><a href="#" data-filter=".dress">Новые</a></li>
+                        <li class="accessories"><a href="#" data-filter=".accessories">Лучшие</a></li>
+                        <li class="miscellaneous"><a href="#" data-filter=".miscellaneous">Популярные</a></li>
+                    </ul>
+                </div>
+
+                <!-- Окно быстрого заказа -->
+                <div class="modal fade popup-product-view" id="popup-product-view" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="container">
+                        <div class="modal-content">
+
+                            <div class="extended_product_page" id="extended_product_page">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрыть</span></button>
+                                    <h2 class="modal-title">Окно быстрого заказа</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row product-single blocks">
+                                        <div class="col-lg-5 col-md-4 col-sm-5 col-xsp-6">
+                                            <div class="block">
+                                                <div class="owl-carousel product-img-carousel">
+                                                    <div class="item"><a href="{% static 'assets\img\preview\shop\category-1.jpg' %}" data-gal="prettyPhoto"><img class="img-responsive" src="{% static 'assets\img\preview\shop\category-1.jpg' %}" alt=""></a></div>
+                                                    <div class="item"><a href="{% static 'assets\img\preview\shop\category-2.jpg' %}" data-gal="prettyPhoto"><img class="img-responsive" src="{% static 'assets\img\preview\shop\category-2.jpg' %}" alt=""></a></div>
+                                                    <div class="item"><a href="{% static 'assets\img\preview\shop\category-3.jpg' %}" data-gal="prettyPhoto"><img class="img-responsive" src="{% static 'assets\img\preview\shop\category-3.jpg' %}" alt=""></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7 col-md-8 col-sm-7 col-xsp-6">
+                                            <div class="block">
+                                                <div class="product-rating clearfix">
+                                                    <span class="rating">
+                                                        <span class="star"></span>
+                                                        <span class="star"></span>
+                                                        <span class="star"></span>
+                                                        <span class="star"></span>
+                                                        <span class="star"></span>
+                                                    </span>
+                                                    <a href="#">5 оценок</a>
+                                                </div>
+                                                <div class="product-price">5 000.00 р.</div>
+                                                <div class="product-qty">
+                                                    <form class="form-inline">
+                                                        <div class="form-group"><label>Шт.:</label><input class="form-control qty" value="1" type="text"></div>
+                                                        <button type="submit" class="btn btn-theme btn-theme-md">В корзину</button>
+                                                    </form>
+                                                </div>
+                                                <p>Исходя из структуры пирамиды Маслоу, мониторинг активности исключительно транслирует рыночный рекламный бриф, не считаясь с затратами. Согласно ставшей уже классической работе Филипа Котлера, организация службы маркетинга парадоксально охватывает стратегический инвестиционный продукт.</p>
+                                                <ul class="list">
+                                                    <li><i class="fa fa-check"></i>Характеристика №1</li>
+                                                    <li><i class="fa fa-check"></i>Характеристика №2</li>
+                                                    <li><i class="fa fa-check"></i>Характеристика №3</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-theme" data-dismiss="modal">Отменить</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Окно быстрого заказа -->
+
+                <div class="row thumbnails category latest-products isotope isotope-items">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xsp-6 isotope-item dress">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\shop\category-1.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper div-table">
+                                        <div class="caption-inner div-cell">
+                                            <p class="caption-view"><a href="#" data-toggle="modal" data-target="#popup-product-view">Подробнее</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="caption-prices">
+                                    <del class="base">7 000 р.</del>
+                                    <span class="price">5 000 р.</span>
+                                </div>
+                                <h3 class="caption-title">Название товара</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xsp-6 isotope-item accessories">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\shop\category-2.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper div-table">
+                                        <div class="caption-inner div-cell">
+                                            <p class="caption-view"><a href="#" data-toggle="modal" data-target="#popup-product-view">Подробнее</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="caption-prices">
+                                    <del class="base">7 000 р.</del>
+                                    <span class="price">5 000 р.</span>
+                                </div>
+                                <h3 class="caption-title">Название товара</h3>
+                            </div>
+                            <div class="new">Акция</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xsp-6 isotope-item miscellaneous">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\shop\category-3.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper div-table">
+                                        <div class="caption-inner div-cell">
+                                            <p class="caption-view"><a href="#" data-toggle="modal" data-target="#popup-product-view">Подробнее</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="caption-prices">
+                                    <del class="base">7 000 р.</del>
+                                    <span class="price">5 000 р.</span>
+                                </div>
+                                <h3 class="caption-title">Название товара</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xsp-6 isotope-item dress miscellaneous">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\shop\category-4.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper div-table">
+                                        <div class="caption-inner div-cell">
+                                            <p class="caption-view"><a href="#" data-toggle="modal" data-target="#popup-product-view">Подробнее</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="caption-prices">
+                                    <del class="base">7 000 р.</del>
+                                    <span class="price">5 000 р.</span>
+                                </div>
+                                <h3 class="caption-title">Название товара</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xsp-6 isotope-item dress accessories">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="% stataic 'assets\img\preview\shop\category-5.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper div-table">
+                                        <div class="caption-inner div-cell">
+                                            <p class="caption-view"><a href="#" data-toggle="modal" data-target="#popup-product-view">Подробнее</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="caption-prices">
+                                    <del class="base">7 000 р.</del>
+                                    <span class="price">5 000 р.</span>
+                                </div>
+                                <h3 class="caption-title">Название товара</h3>
+                            </div>
+                            <div class="new">Акция</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xsp-6 isotope-item accessories miscellaneous">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\shop\category-6.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper div-table">
+                                        <div class="caption-inner div-cell">
+                                            <p class="caption-view"><a href="#" data-toggle="modal" data-target="#popup-product-view">Подробнее</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="caption-prices">
+                                    <del class="base">7 000 р.</del>
+                                    <span class="price">5 000 р.</span>
+                                </div>
+                                <h3 class="caption-title">Название товара</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xsp-6 isotope-item dress accessories">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\shop\category-7.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper div-table">
+                                        <div class="caption-inner div-cell">
+                                            <p class="caption-view"><a href="#" data-toggle="modal" data-target="#popup-product-view">Подробнее</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="caption-prices">
+                                    <del class="base">7 000 р.</del>
+                                    <span class="price">5 000 р.</span>
+                                </div>
+                                <h3 class="caption-title">Название товара</h3>
+                            </div>
+                            <div class="new">Акция</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xsp-6 isotope-item miscellaneous">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\shop\category-8.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper div-table">
+                                        <div class="caption-inner div-cell">
+                                            <p class="caption-view"><a href="#" data-toggle="modal" data-target="#popup-product-view">Подробнее</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="caption-prices">
+                                    <del class="base">7 000 р.</del>
+                                    <span class="price">5 000 р.</span>
+                                </div>
+                                <h3 class="caption-title">Название товара</h3>
+                            </div>
+                            <div class="new">Акция</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /Категории -->
+
+        <!-- Товары -->
+        <section class="page-section image season-sale">
+            <div class="container">
+                <div class="div-table full-width">
+                    <div class="div-cell text-center">
+                        <h1 class="section-title">С 31 августа<small>Скидка в 20% на все товары!</small></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section">
+            <div class="container">
+
+                <div class="row blocks">
+                    <div class="col-sm-4">
+                        <div class="block product-list">
+                            <h4 class="block-title">Лидеры продаж</h4>
+                            <div class="media">
+                                <a class="pull-left media-link" href="#" data-toggle="modal" data-target="#popup-product-view">
+                                    <img class="media-object" src="{% static 'assets\img\preview\shop\featured-1.jpg' %}" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="{% static 'shop-single.html' %}">Название товара<small>Короткое описание товара</small></a></h4>
+                                    <div class="price">5 000 р.</div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left media-link" href="#" data-toggle="modal" data-target="#popup-product-view">
+                                    <img class="media-object" src="{% static 'assets\img\preview\shop\featured-2.jpg' %}" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="{% static 'shop-single.html' %}">Название товара<small>Короткое описание товара</small></a></h4>
+                                    <div class="price">5 000 р.</div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left media-link" href="#" data-toggle="modal" data-target="#popup-product-view">
+                                    <img class="media-object" src="{% static 'assets\img\preview\shop\featured-3.jpg' %}" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="{% static 'shop-single.html' %}">Название товара<small>Короткое описание товара</small></a></h4>
+                                    <div class="price">5 000 р.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="block product-list">
+                            <h4 class="block-title">Популярные</h4>
+                            <div class="media">
+                                <a class="pull-left media-link" href="#" data-toggle="modal" data-target="#popup-product-view">
+                                    <img class="media-object" src="{% static 'assets\img\preview\shop\featured-4.jpg' %}" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="{% static 'shop-single.html' %}">Название товара<small>Короткое описание товара</small></a></h4>
+                                    <div class="price">5 000 р.</div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left media-link" href="#" data-toggle="modal" data-target="#popup-product-view">
+                                    <img class="media-object" src="{% static 'assets\img\preview\shop\featured-5.jpg'%}" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="{% static 'shop-single.html' %}">Название товара<small>Короткое описание товара</small></a></h4>
+                                    <div class="price">5 000 р.</div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left media-link" href="#" data-toggle="modal" data-target="#popup-product-view">
+                                    <img class="media-object" src="{% static 'assets\img\preview\shop\featured-6.jpg' %}" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="{% static 'shop-single.html' %}">Название товара<small>Короткое описание товара</small></a></h4>
+                                    <div class="price">5 000 р.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="block product-list">
+                            <h4 class="block-title">Последние</h4>
+                            <div class="media">
+                                <a class="pull-left media-link" href="#" data-toggle="modal" data-target="#popup-product-view">
+                                    <img class="media-object" src="{% static 'assets\img\preview\shop\featured-7.jpg' %}" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="{% static 'static shop-single.html' %}">Название товара</a></h4>
+                                    <div class="price"><del>7 000 р.</del> <ins>5 000 р.</ins></div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left media-link" href="#" data-toggle="modal" data-target="#popup-product-view">
+                                    <img class="media-object" src="{% static 'assets\img\preview\shop\featured-8.jpg' %" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="{% static 'shop-single.html' %}">Название товара</a></h4>
+                                    <div class="price"><del>7 000 р.</del> <ins>5 000 р.</ins></div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left media-link" href="#" data-toggle="modal" data-target="#popup-product-view">
+                                    <img class="media-object" src="{% static 'assets\img\preview\shop\featured-2.jpg' %}" alt="">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="{% static 'shop-single.html' %}">Название товара</a></h4>
+                                    <div class="price"><del>7 000 р.</del> <ins>5 000 р.</ins></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row blocks shop-info-banners">
+                    <div class="col-md-4">
+                        <div class="block">
+                            <div class="media">
+                                <div class="pull-left"><i class="fa fa-star"></i></div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Техническая поддержка</h4>
+                                    Круглосуточно
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="block">
+                            <div class="media">
+                                <div class="pull-left"><i class="fa fa-credit-card"></i></div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Варианты оплаты</h4>
+                                    Свыше 10 разных видов
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="block">
+                            <div class="media">
+                                <div class="pull-left"><i class="fa fa-bell-alt"></i></div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Отслеживание товара</h4>
+                                    Прямой доступ к доставке
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /Товары -->
+
+        <section class="page-section latest-blog no-padding-bottom">
+            <div class="container">
+                <h1 class="section-title">Новости сайта</h1>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <article class="post-wrap">
+                            <div class="post-media">
+                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                                        <a class="media-link" href="blog-single.html">
+                                            <img src="{% static 'assets\img\preview\blog\blog-post-1.jpg' %}" alt="">
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-header">
+                                <div class="post-meta">31 августа 2016 : Пришло от <a href="#">Admin</a> : 5 <i class="fa fa-comments"></i></div>
+                                <h2 class="post-title"><a href="blog-single.html">Новое пополнение нашей коллекции</a></h2>
+                            </div>
+                            <div class="post-body">
+                                <div class="post-excerpt">
+                                    VIP-мероприятие экономит анализ рыночных цен. Инвестиционный продукт, следовательно, обоснован необходимостью.
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <article class="post-wrap">
+                            <div class="post-media">
+                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                                        <a class="media-link" href="blog-single.html">
+                                            <img src="{% static 'assets\img\preview\blog\blog-post-2.jpg' %}" alt="">
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-header">
+                                <div class="post-meta">31 августа 2016 : Пришло от <a href="#">Admin</a> : 5 <i class="fa fa-comments"></i></div>
+                                <h2 class="post-title"><a href="blog-single.html">Новое пополнение нашей коллекции</a></h2>
+                            </div>
+                            <div class="post-body">
+                                <div class="post-excerpt">
+                                    VIP-мероприятие экономит анализ рыночных цен. Инвестиционный продукт, следовательно, обоснован необходимостью.
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <article class="post-wrap">
+                            <div class="post-media">
+                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                                        <a class="media-link" href="blog-single.html">
+                                            <img src="{% static 'assets\img\preview\blog\blog-post-3.jpg' %}" alt="">
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-header">
+                                <div class="post-meta">31 августа 2016 : Пришло от <a href="#">Admin</a> : 5 <i class="fa fa-comments"></i></div>
+                                <h2 class="post-title"><a href="blog-single.html">Новое пополнение нашей коллекции</a></h2>
+                            </div>
+                            <div class="post-body">
+                                <div class="post-excerpt">
+                                    VIP-мероприятие экономит анализ рыночных цен. Инвестиционный продукт, следовательно, обоснован необходимостью.
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <article class="post-wrap">
+                            <div class="post-media">
+                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                                        <a class="media-link" href="blog-single.html">
+                                            <img src="{% static 'assets\img\preview\blog\blog-post-4.jpg' %}" alt="">
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-header">
+                                <div class="post-meta">31 августа 2016 : Пришло от <a href="#">Admin</a> : 5 <i class="fa fa-comments"></i></div>
+                                <h2 class="post-title"><a href="blog-single.html">Новое пополнение нашей коллекции</a></h2>
+                            </div>
+                            <div class="post-body">
+                                <div class="post-excerpt">
+                                    VIP-мероприятие экономит анализ рыночных цен. Инвестиционный продукт, следовательно, обоснован необходимостью.
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="section-separator"><i></i></div>
+
+                <div class="partners-carousel">
+                    <div class="owl-carousel" id="partners">
+                        <div><a href="#"><img src="{% static 'assets\img\preview\partners\partner-1.png' %}" alt=""></a></div>
+                        <div><a href="#"><img src="{% static 'assets\img\preview\partners\partner-2.png' %}" alt=""></a></div>
+                        <div><a href="#"><img src="{% static 'assets\img\preview\partners\partner-3.png' %}" alt=""></a></div>
+                        <div><a href="#"><img src="{% static 'assets\img\preview\partners\partner-4.png' %}" alt=""></a></div>
+                        <div><a href="#"><img src="{% static 'assets\img\preview\partners\partner-5.png' %}" alt=""></a></div>
+                        <div><a href="#"><img src="{% static 'assets\img\preview\partners\partner-6.png' %}" alt=""></a></div>
+                        <div><a href="#"><img src="{% static 'assets\img\preview\partners\partner-1.png' %}" alt=""></a></div>
+                        <div><a href="#"><img src="{% static 'assets\img\preview\partners\partner-2.png' %}" alt=""></a></div>
+                        <div><a href="#"><img src="{% static 'assets\img\preview\partners\partner-3.png' %}" alt=""></a></div>
+                        <div><a href="#"><img src="{% static 'assets\img\preview\partners\partner-4.png' %}" alt=""></a></div>
+                        <div><a href="#"><img src="{% static 'assets\img\preview\partners\partner-5.png' %}" alt=""></a></div>
+                        <div><a href="#"><img src="{% static 'assets\img\preview\partners\partner-6.png' %}" alt=""></a></div>
+                    </div>
+                </div>
+
+                <div class="section-separator"><i></i></div>
+
+            </div>
+        </section>
+
+        <!-- Акции -->
+        <section class="page-section no-padding image promotions" id="promotions">
+            <div class="container full-width">
+
+                <div id="promotions-slider" class="owl-carousel owl-theme promotions-slider">
+
+                    <!-- Slide 1 -->
+                    <div class="item slide1">
+                        <div class="container">
+                            <img class="slide-img" src="{% static 'assets\img\preview\slider\promotion-2.png' %}" alt="slide1">
+                            <div class="caption">
+                                <div class="div-table">
+                                    <div class="div-cell">
+                                        <div class="caption-content">
+                                            <h2 class="caption-title">Внимание акция!</h2>
+                                            <div class="caption-price">Экономьте до 50% от заказа</div>
+                                            <p class="caption-text">Стиль менеджмента, на первый взгляд, продуцирует фирменный стиль. Сегментация рынка, на первый взгляд, актаульна как никогда.</p>
+                                            <div><a class="btn btn-theme" href="{% static 'shop.html' %}">Заказать сейчас!</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="item slide2">
+                        <div class="container">
+                            <img class="slide-img" src="{% static 'assets\img\preview\slider\promotion-2.png' %}" alt="slide2">
+                            <div class="caption">
+                                <div class="div-table">
+                                    <div class="div-cell">
+                                        <div class="caption-content">
+                                            <h2 class="caption-title">Внимание акция!</h2>
+                                            <div class="caption-price">Экономьте до 50% от заказа</div>
+                                            <p class="caption-text">Стиль менеджмента, на первый взгляд, продуцирует фирменный стиль. Сегментация рынка, на первый взгляд, актаульна как никогда.</p>
+                                            <div><a class="btn btn-theme" href="shop.html">Заказать сейчас!</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- /Акции -->
+
+        <!-- Отзывы -->
+        <section class="page-section no-padding" id="reviews">
+            <div class="container full-width">
+                <div class="row thumbnails no-padding reviews">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\reviews\review-1.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper">
+                                        <div class="caption-inner">
+                                            <h3 class="caption-title">Лидерство в продажах усиливает рекламный блок, отвоевывая свою долю рынка.</h3>
+                                            <p class="caption-text">Джон Доу</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <h3 class="caption-title">Восприятие марки естественно тормозит социальный статус.</h3>
+                                <p class="caption-text">Джейн Доу</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\reviews\review-2.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper">
+                                        <div class="caption-inner">
+                                            <h3 class="caption-title">Лидерство в продажах усиливает рекламный блок, отвоевывая свою долю рынка.</h3>
+                                            <p class="caption-text">Джон Доу</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <h3 class="caption-title">Восприятие марки естественно тормозит социальный статус.</h3>
+                                <p class="caption-text">Джейн Доу</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\reviews\review-3.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper">
+                                        <div class="caption-inner">
+                                            <h3 class="caption-title">Лидерство в продажах усиливает рекламный блок, отвоевывая свою долю рынка.</h3>
+                                            <p class="caption-text">Джон Доу</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <h3 class="caption-title">Восприятие марки естественно тормозит социальный статус.</h3>
+                                <p class="caption-text">Джейн Доу</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\reviews\review-1.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper">
+                                        <div class="caption-inner">
+                                            <h3 class="caption-title">Лидерство в продажах усиливает рекламный блок, отвоевывая свою долю рынка.</h3>
+                                            <p class="caption-text">Джон Доу</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <h3 class="caption-title">Восприятие марки естественно тормозит социальный статус.</h3>
+                                <p class="caption-text">Джейн Доу</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\reviews\review-2.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper">
+                                        <div class="caption-inner">
+                                            <h3 class="caption-title">Лидерство в продажах усиливает рекламный блок, отвоевывая свою долю рынка.</h3>
+                                            <p class="caption-text">Джон Доу</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <h3 class="caption-title">Восприятие марки естественно тормозит социальный статус.</h3>
+                                <p class="caption-text">Джейн Доу</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail no-border no-padding">
+                            <div class="media">
+                                <img src="{% static 'assets\img\preview\reviews\review-3.jpg' %}" alt="">
+                                <div class="caption hovered">
+                                    <div class="caption-wrapper">
+                                        <div class="caption-inner">
+                                            <h3 class="caption-title">Лидерство в продажах усиливает рекламный блок, отвоевывая свою долю рынка.</h3>
+                                            <p class="caption-text">Джон Доу</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <h3 class="caption-title">Восприятие марки естественно тормозит социальный статус.</h3>
+                                <p class="caption-text">Джейн Доу</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Отзывы -->
+
+        <!-- контакты -->
+        <section class="page-section image contact no-padding-top" id="contacts">
+            <div class="container" style="background-color: rgba(255, 255, 255, 0.63); margin-top: 40px;">
+
+                <div class="section-separator"><i></i></div>
+
+                <h1 class="section-title">Контакты<small>Вы можете связаться с администрацией через форму ниже</small></h1>
+
+                <!-- форма -->
+                <form name="af-form" method="post" action="#contact" class="af-form row" id="af-form">
+
+                    <div class="col-sm-8 col-sm-offset-2">
+
+                        <div class="af-outer af-required">
+                            <div class="form-group af-inner">
+                                <label class="sr-only" for="name">Имя</label>
+                                <input type="text" name="name" id="name" placeholder="Имя" value="" size="30" data-toggle="tooltip" title="Обязательно" class="form-control placeholder">
+                            </div>
+                        </div>
+
+                        <div class="af-outer af-required">
+                            <div class="form-group af-inner">
+                                <label class="sr-only" for="email">Email</label>
+                                <input type="text" name="email" id="email" placeholder="Email" value="" size="30" data-toggle="tooltip" title="Обязательно" class="form-control placeholder">
+                            </div>
+                        </div>
+
+                        <div class="af-outer af-required">
+                            <div class="form-group af-inner">
+                                <label class="sr-only" for="subject">Тема</label>
+                                <input type="text" name="subject" id="subject" placeholder="Тема" value="" size="30" data-toggle="tooltip" title="Обязательно" class="form-control placeholder">
+                            </div>
+                        </div>
+
+                        <div class="form-group af-inner">
+                            <label class="sr-only" for="input-message">Сообщение</label>
+                            <textarea name="message" id="input-message" placeholder="Сообщение" rows="4" cols="50" data-toggle="tooltip" title="Обязательно" class="form-control placeholder"></textarea>
+                        </div>
+
+                        <div class="col-sm-12 af-outer af-required">
+                            <div class="form-group af-inner text-center">
+                                <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme" id="submit_btn" value="Отправить">
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <!-- /форма -->
+
+            </div>
+        </section>
+        <!-- /контакты -->
+
+        <!-- карта -->
+        <section class="page-section no-padding" id="location">
+            <div class="container full-width">
+
+                <!-- Google map -->
+                <div class="google-map">
+                    <div id="map-canvas"></div>
+                </div>
+                <!-- /Google map -->
+
+            </div>
+        </section>
+        <!-- /карта -->
+
+    </div>
+    <!-- /Контент -->
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-widgets">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <div class="widget">
+                            <p class="footer-logo">
+                                <span class="fa-stack">
+                                    <i class="fa fa-stack-2x logo-bg"></i>
+                                    <i class="fa fa-stack-1x logo-fa fa-globe"></i>
+                                </span>
+                                <span class="logo-text">Crosstore</span>
+                                <small>интернет-магазин</small>
+                            </p>
+                            <address>
+                                <ul>
+                                    <li><i class="fa fa-phone"></i>111-111-111</li>
+                                    <li><i class="fa fa-skype"></i>Skype</li>
+                                    <li><i class="fa fa-envelope"></i><a href="mailto:#">mail@mail.com</a></li>
+                                    <li><i class="fa fa-map-marker"></i>Россия, Москва</li>
+                                </ul>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="widget widget-navigation">
+                            <h3 class="widget-title">Разделы сайта</h3>
+                            <ul>
+                                <li><i class="fa fa-angle-right"></i><a href="#">Главная</a></li>
+                                <li><i class="fa fa-angle-right"></i><a href="#">Услуги</a></li>
+                                <li><i class="fa fa-angle-right"></i><a href="#">О нас</a></li>
+                                <li><i class="fa fa-angle-right"></i><a href="#">Магазин</a></li>
+                                <li><i class="fa fa-angle-right"></i><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="widget widget-navigation">
+                            <h3 class="widget-title">Категории</h3>
+                            <ul>
+                                <li><i class="fa fa-angle-right"></i><a href="#">Мужская обувь</a></li>
+                                <li><i class="fa fa-angle-right"></i><a href="#">Женская обувь</a></li>
+                                <li><i class="fa fa-angle-right"></i><a href="#">Детская обувь</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="widget widget-subscription">
+                            <h3 class="widget-title">Рассылка</h3>
+                            <p>Подпишитесь на рассылку новостей и акций. </p>
+                            <form id="subscribe" name="subscribe-form" class="subscribe-form" action="#" method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-name" data-toggle="tooltip" title="Mail is required" placeholder="Введите почту..">
+                                </div>
+                                <button class="btn btn-theme submit-button" type="submit">Готово</button>
+                            </form>
+                            <div class="clearfix">
+                                <ul class="social-line list-inline">
+                                    <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-meta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="copyright">&copy; 2015 Crosstore - шаблон интернет-магазина спортивной обуви</span>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="payments">Мы принимаем
+                            <img src="{% static 'assets\img\preview\payments\mastercard.png' %}" alt="">
+                            <img src="{% static 'assets\img\preview\payments\amex.png' %}" alt="">
+                            <img src="{% static 'assets\img\preview\payments\paypal.png' %}" alt="">
+                            <img src="{% static 'assets\img\preview\payments\visa.png' %}" alt="">
+                        </span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+    <!-- /Футер -->
+
+    <div id="to-top" class="to-top"><i class="fa fa-angle-up"></i></div>
+
+</div>
+<!-- /Обертка -->
+
+
+<!--[if lt IE 9]><script src="{% static 'assets/plugins/jquery/jquery-1.11.1.min.js' %}"></script><![endif]-->
+<!--[if gte IE 9]><!--><script src="{% static 'assets\plugins\jquery\jquery-2.1.1.min.js' %}"></script><!--<![endif]-->
+<script src="{% static 'assets\plugins\modernizr.custom.js' %}"></script>
+<script src="{% static 'assets\plugins\bootstrap\js\bootstrap.min.js' %}"></script>
+<script src="{% static 'assets\plugins\bootstrap-select\bootstrap-select.min.js' %}"></script>
+<script src="{% static 'assets\plugins\superfish\js\superfish.min.js' %}"></script>
+<script src="{% static 'assets\plugins\prettyphoto\js\jquery.prettyPhoto.js' %}"></script>
+<script src="{% static 'assets\plugins\jquery.smoothscroll.min.js' %}"></script>
+<script src="{% static 'assets\plugins\jquery.easing.min.js' %}"></script>
+<script src="{% static 'assets\plugins\smooth-scrollbar.min.js' %}"></script>
+<script src="{% static 'assets\plugins\jquery.sticky.min.js' %}"></script>
+
+
+<script src="{% static 'assets\plugins\owlcarousel2\owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets\plugins\isotope\jquery.isotope.min.js' %}"></script>
+<script src="{% static 'assets\plugins\waypoints\waypoints.min.js' %}"></script>
+<script src="{% static 'assets\plugins\countdown\jquery.plugin.min.js' %}"></script>
+<script src="{% static 'assets\plugins\countdown\jquery.countdown.min.js'"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script src="{% static 'assets\js\theme.js' %}"></script>
+
+</body>
+</html>
