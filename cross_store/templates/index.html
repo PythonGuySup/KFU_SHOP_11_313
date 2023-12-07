@@ -334,6 +334,7 @@
                 <div class="modal-body">
                     <section>
                         <form action="#" method="post" class="row">
+                            {% csrf_token %}
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="popup-login-email">Email</label>
