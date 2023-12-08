@@ -367,8 +367,8 @@
     <div class="top-line">
         <div class="container">
             <ul class="top-line-navigation">
-                <li><a href="shop.html">Магазин</a></li>
-                <li><a href="blog.html">Новости</a></li>
+                <li><a href="{% url 'shop' %}">Магазин</a></li>
+                <li><a href="{% url 'blog' %}">Новости</a></li>
             </ul>
             <ul class="top-line-user-menu">
                 <li><a href="#" data-toggle="modal" data-target="#popup-login">Вход</a></li>
@@ -547,7 +547,7 @@
                                         <h2 class="caption-title">Удобная обувь для сессии!</h2>
                                         <h3 class="caption-subtitle">Нашими продуктами пользуется сам Раис Татарстана!</h3>
                                         <p class="caption-text">
-                                            <a class="btn btn-theme" href="shop.html">Подробнее</a>
+                                            <a class="btn btn-theme" href="{% url 'shop' %}">Подробнее</a>
                                         </p>
                                 </div>
                             </div>
@@ -567,7 +567,7 @@
                                         <h2 class="caption-title">Удобная обувь для сессии!</h2>
                                         <h3 class="caption-subtitle">Нашими продуктами пользуется сам Раис Татарстана!</h3>
                                         <p class="caption-text">
-                                            <a class="btn btn-theme" href="{% static 'shop.html' %}">Подробнее</a>
+                                            <a class="btn btn-theme" href="{% url 'shop' %}">Подробнее</a>
                                         </p>
                                 </div>
                         </div>
@@ -587,7 +587,7 @@
                                         <h2 class="caption-title">Удобная обувь для сессии!</h2>
                                         <h3 class="caption-subtitle">Нашими продуктами пользуется сам Раис Татарстана!</h3>
                                         <p class="caption-text">
-                                            <a class="btn btn-theme" href="shop.html">Подробнее</a>
+                                            <a class="btn btn-theme" href="{% url 'shop' %}">Подробнее</a>
                                         </p>
                                 </div>
                         </div>
@@ -718,7 +718,9 @@
                             </div>
                         </div>
                     </div>
+                    DUIFCUHDGUVHIRFUHREFJVEFUIRDIOE;IREUIDVFBUDFWHWDJIFEB
                     <div class="col-md-4">
+                        ваваьл
                         <div class="media">
                             <div class="pull-left">
                                 <div class="media-object"><i class="fa fa-home"></i></div>
@@ -821,7 +823,8 @@
                                                 </div>
                                                 <div class="product-price">5 000.00 р.</div>
                                                 <div class="product-qty">
-                                                    <form class="form-inline">
+                                                    <form class="form-inline" method="post">
+                                                        {% csrf_token %}
                                                         <div class="form-group"><label>Шт.:</label><input class="form-control qty" value="1" type="text"></div>
                                                         <button type="submit" class="btn btn-theme btn-theme-md">В корзину</button>
                                                     </form>
@@ -1125,7 +1128,7 @@
                             </div>
                             <div class="media">
                                 <a class="pull-left media-link" href="#" data-toggle="modal" data-target="#popup-product-view">
-                                    <img class="media-object" src="{% static 'assets\img\preview\shop\featured-8.jpg' %}" alt="">
+                                    <img class="media-object" src="{% static 'assets\img\preview\shop\featured-8.jpg' %}ca" alt="">
                                     <i class="fa fa-plus"></i>
                                 </a>
                                 <div class="media-body">
@@ -1330,7 +1333,7 @@
                                             <h2 class="caption-title">Внимание акция!</h2>
                                             <div class="caption-price">Экономьте до 50% от заказа</div>
                                             <p class="caption-text">Стиль менеджмента, на первый взгляд, продуцирует фирменный стиль. Сегментация рынка, на первый взгляд, актаульна как никогда.</p>
-                                            <div><a class="btn btn-theme" href="shop.html">Заказать сейчас!</a></div>
+                                            <div><a class="btn btn-theme" href="{% url 'shop' %}">Заказать сейчас!</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1349,7 +1352,7 @@
                                             <h2 class="caption-title">Внимание акция!</h2>
                                             <div class="caption-price">Экономьте до 50% от заказа</div>
                                             <p class="caption-text">Стиль менеджмента, на первый взгляд, продуцирует фирменный стиль. Сегментация рынка, на первый взгляд, актаульна как никогда.</p>
-                                            <div><a class="btn btn-theme" href="shop.html">Заказать сейчас!</a></div>
+                                            <div><a class="btn btn-theme" href="{% url 'shop' %}">Заказать сейчас!</a></div>
                                         </div>
                                     </div>
                                 </div>
