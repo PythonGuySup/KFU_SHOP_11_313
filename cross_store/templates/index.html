@@ -10,6 +10,8 @@
 
     <title>KFU CROSS - интернет-магазин спортивной обуви от КФУ.</title>
     {% load static %}
+
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
     <link href="{% static 'assets\plugins\bootstrap\css\bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'assets\plugins\fontawesome\css\font-awesome.min.css' %}" rel="stylesheet">
     <link href="{% static 'assets\plugins\bootstrap-select\bootstrap-select.min.css' %}" rel="stylesheet">
@@ -323,6 +325,118 @@
     </div>
     <!-- /Окно с корзиной -->
 
+     <!-- Форма регистрации -->
+    <div class="modal fade popup-register" id="popup-register" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрыть</span></button>
+                    <h4 class="modal-title">Вход</h4>
+                </div>
+                <div class="modal-body">
+                    <section>
+
+                        <form action="#" method="post">
+                            <section>
+                                <h3 class="block-title">Введите данные для регистрации</h3>
+                                <div class="form-group">
+                                    <label>Логин</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Пароль</label>
+                                    <input type="password" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Еще раз пароль</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                            </section>
+                            <section>
+                                <h3 class="block-title">Введите необязательные данные</h3>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group"><label>Страна</label></div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group selectpicker-wrapper">
+                                            <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
+                                                <option>Выбор страны</option>
+                                                <option>Россия</option>
+                                                <option>Украина</option>
+                                                <option>Белорусь</option>
+                                                <option>Казахстан</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group"><label>Имя</label></div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group"><input type="text" class="form-control"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group"><label>Фамилия</label></div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group"><input type="text" class="form-control"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group"><label>Город\поселок</label></div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group"><input type="text" class="form-control"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group"><label>Улица, дом</label></div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group"><input type="text" class="form-control"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group"><label>Индекс</label></div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group"><input type="text" class="form-control"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group"><label>E-mail</label></div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group"><input type="text" class="form-control"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group"><label>Телефон</label></div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group"><input type="text" class="form-control"></div>
+                                    </div>
+                                </div>
+                            </section>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Форма регистрации -->
+
     <!-- Форма входа -->
     <div class="modal fade popup-login" id="popup-login" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -338,17 +452,17 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="popup-login-email">Email</label>
-                                    <input id="popup-login-email" type="text" class="form-control">
+                                    <input id="popup-login-email" name="email" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="popup-login-password">Пароль</label>
-                                    <input id="popup-login-password" type="password" class="form-control">
+                                    <input id="popup-login-password" name="password" type="password" class="form-control">
                                 </div>
                             </div>
                             <div class="col-sm-12">
-                                <label><input type="checkbox"> Запомнить меня</label> <br class="clear">
+                                <label><input name="remember" type="checkbox"> Запомнить меня</label> <br class="clear">
                                 <a class="link" href="#">Забыли пароль?</a>
                             </div>
 
@@ -372,7 +486,7 @@
             </ul>
             <ul class="top-line-user-menu">
                 <li><a href="#" data-toggle="modal" data-target="#popup-login">Вход</a></li>
-                <li><a href="#">Регистрация</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#popup-register">Регистрация</a></li>
             </ul>
         </div>
     </div>

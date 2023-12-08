@@ -2,8 +2,9 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    if request.POST:
-        print("Пост-обработан", request.POST)
+    if request.method == "POST":
+        data = request.POST
+        print("Пост-обработан", data["remember"])
         return render(request, "index.html")
     else:
         return render(request, "index.html")
