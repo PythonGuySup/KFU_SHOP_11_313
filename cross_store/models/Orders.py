@@ -1,6 +1,6 @@
 from django.db import models
-from .product import Products
-from .customer import Customer
+from .Product import Products
+from .Customer import Customer
 import datetime
 
 
