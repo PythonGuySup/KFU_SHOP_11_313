@@ -98,7 +98,7 @@
 body {
     font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.9;
     background: #f9f9f9;
     color: #808080;
     -webkit-font-kerning: auto;
@@ -3254,7 +3254,7 @@ textarea {
     transform: translate(0%, 0%)
 }
 .thumbnails.products .thumbnail > .caption {
-    background-color: #645FCE;
+    background-color: #3fa0ec;
     position: absolute;
     left: 0;
     right: 0;
@@ -3472,7 +3472,7 @@ textarea {
 .wide .footer-widgets,
 .boxed .footer-widgets > .container {
     padding-bottom: 40px;
-    background-color: #645FCE;
+    background-color: #214b6d;
     color: #ffffff
 }
 .wide .footer-meta,
