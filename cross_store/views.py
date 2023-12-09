@@ -9,13 +9,21 @@ def index(request):
     return render(request, "index.html")
 
 
-@login_requested
 def shop(request):
     return render(request, "shop.html")
 
 
 def blog(request):
     return render(request, "blog.html")
+
+
+@login_requested
+def private_office(request):
+    customer = Customer.get_customer_by_id(request.session.get("customer"))
+    context = {"first_name": customer.first_name, "last_name": customer.last_name}
+    print(context)
+    return render(request, template_name="private-office.html",
+                  context=context)
 
 
 def register(request):
