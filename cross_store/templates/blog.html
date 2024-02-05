@@ -12,6 +12,7 @@
 
     <title>Crosstore - шаблон интернет-магазина спортивной обуви</title>
 
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
     <link href="{% static 'assets\plugins\bootstrap\css\bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'assets\plugins\fontawesome\css\font-awesome.min.css' %}" rel="stylesheet">
     <link href="{% static 'assets\plugins\bootstrap-select\bootstrap-select.min.css' %}" rel="stylesheet">
@@ -474,7 +475,7 @@
                                     <div class="thumbnails category">
                                         <div class="thumbnail no-border no-padding">
                                             <div class="media">
-                                                <img src="{$ static 'assets\img\preview\shop\category-2.jpg' %}" alt="">
+                                                <img src="{% static 'assets\img\preview\shop\category-2.jpg' %}" alt="">
                                                 <div class="caption hovered">
                                                     <div class="caption-wrapper div-table">
                                                         <div class="caption-inner div-cell">
@@ -873,8 +874,8 @@
 <script src="{% static 'assets\plugins\jquery.easing.min.js' %}"></script>
 <script src="{% static 'assets\plugins\smooth-scrollbar.min.js' %}"></script>
 <script src="{% static 'assets\plugins\jquery.sticky.min.js' %}"></script>
-<script src="{% static 'ssets\plugins\owlcarousel2\owl.carousel.min.js' %}"></script>
-<script src="{% static 'assets\plugins\waypoints\waypoints.min.js'"></script>
+<script src="{% static 'assets\plugins\owlcarousel2\owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets\plugins\waypoints\waypoints.min.js' %}"></script>
 <script src="{% static 'assets\js\theme.js' %}"></script>
 
 </body>

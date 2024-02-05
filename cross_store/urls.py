@@ -10,6 +10,10 @@ urlpatterns = [
     path('index.html', views.index, name="index"),
     path('shop.html', views.shop, name="shop"),
     path('blog.html', views.blog, name="blog"),
+    path('private-office.html', views.private_office, name="private-office"),
+    path('register', views.register, name="register"),
+    path('login', views.login, name="login"),
+    path('logout', views.logout, name="logout")
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

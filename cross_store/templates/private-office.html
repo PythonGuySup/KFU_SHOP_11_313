@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Личный кабинет</title>
+    {% load static %}
+
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link href="{% static 'assets\plugins\bootstrap\css\bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\plugins\fontawesome\css\font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\plugins\bootstrap-select\bootstrap-select.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\plugins\owlcarousel2\assets\owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\plugins\owlcarousel2\assets\owl.theme.default.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\plugins\prettyphoto\css\prettyPhoto.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\plugins\countdown\jquery.countdown.css' %}" rel="stylesheet">
+    <link href="{% static 'assets\css\style.css' %}" rel="stylesheet">
+
+</head>
+<body id="private-office" class="wide">
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="preloader-status">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        <div id="preloader-title">Идет загрузка...</div>
+    </div>
+</div>
+
+<!-- Обертка -->
+<div class="wrapper">
+    <!-- Верхняя линия -->
+    <div class="top-line">
+        <div class="container">
+            <ul class="top-line-navigation">
+                <li><a href="{% url 'shop' %}">Магазин</a></li>
+                <li><a href="{% url 'blog' %}">Новости</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /Верхняя линия -->
+
+     <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <h3>Личный кабинет</h3>
+                        <p>Привет, {{ first_name }} {{ last_name}}</p>
+                        <a href="#" class="btn btn-theme btn-primary">Изменить профиль</a><br>
+                        <a href="{% url 'logout' %}" class="btn btn-theme btn-secondary" style="margin-top: 10px">Выйти</a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card">
+                        <h3>Мои заказы</h3>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Номер заказа</th>
+                                    <th>Дата</th>
+                                    <th>Статус</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>12345</td>
+                                    <td>01.01.2022</td>
+                                    <td>Доставлено</td>
+                                </tr>
+                                <tr>
+                                    <td>67890</td>
+                                    <td>05.01.2022</td>
+                                    <td>В пути</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card">
+                        <h3>Избранное</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="{% static 'assets\img\preview\shop\category-1.jpg' %}" alt="Sneaker 1" class="img-fluid">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="{% static 'assets\img\preview\shop\category-2.jpg' %}" alt="Sneaker 2" class="img-fluid">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="{% static 'assets\img\preview\shop\category-3.jpg' %}" alt="Sneaker 3" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- Обертка -->
+
+<!--[if lt IE 9]><script src="{% static 'assets/plugins/jquery/jquery-1.11.1.min.js' %}"></script><![endif]-->
+<!--[if gte IE 9]><!--><script src="{% static 'assets\plugins\jquery\jquery-2.1.1.min.js' %}"></script><!--<![endif]-->
+<script src="{% static 'assets\plugins\modernizr.custom.js' %}"></script>
+<script src="{% static 'assets\plugins\bootstrap\js\bootstrap.min.js' %}"></script>
+<script src="{% static 'assets\plugins\bootstrap-select\bootstrap-select.min.js' %}"></script>
+<script src="{% static 'assets\plugins\superfish\js\superfish.min.js' %}"></script>
+<script src="{% static 'assets\plugins\prettyphoto\js\jquery.prettyPhoto.js' %}"></script>
+<script src="{% static 'assets\plugins\jquery.smoothscroll.min.js' %}"></script>
+<script src="{% static 'assets\plugins\jquery.easing.min.js' %}"></script>
+<script src="{% static 'assets\plugins\smooth-scrollbar.min.js' %}"></script>
+<script src="{% static 'assets\plugins\jquery.sticky.min.js' %}"></script>
+
+
+<script src="{% static 'assets\plugins\owlcarousel2\owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets\plugins\isotope\jquery.isotope.min.js' %}"></script>
+<script src="{% static 'assets\plugins\waypoints\waypoints.min.js' %}"></script>
+<script src="{% static 'assets\plugins\countdown\jquery.plugin.min.js' %}"></script>
+<script src="{% static 'assets\plugins\countdown\jquery.countdown.min.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script src="{% static 'assets\js\theme.js' %}"></script>
+
+</body>
+</html>
