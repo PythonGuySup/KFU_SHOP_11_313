@@ -1765,6 +1765,7 @@
 
     <div id="to-top" class="to-top"><i class="fa fa-angle-up"></i></div>
 
+
 </div>
 <!-- /Обертка -->
 
@@ -1790,5 +1791,21 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 <script src="{% static 'assets\js\theme.js' %}"></script>
 
+<!-- Zolo powered chatbot for sales -->
+<script src="https://console.catalyst.zoho.com/convokraft/assets/js/convokraft-chat-sdk.js"></script>
+<style>
+div.anchor_zia_toBottom {
+
+    width: 330px;
+    height: 450px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+}
+</style>
+<div class="anchor_zia_toBottom">
+<convokraft-chat-bot bot-name="kfucross" project-id="19003000000006017" org-id="845375248"></convokraft-chat-bot>
+</div>
 </body>
 </html>
