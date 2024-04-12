@@ -167,7 +167,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 
-1. Project Head: Sasha Kachanov Romanovich(also known as Egor) they - [@koioes](https://t.me/koioes) - egorkachanov2006@gmail.com
+1. Project Head: Sasha Kachanov Romanovich(also known as Egor) - [@koioes](https://t.me/koioes) - egorkachanov2006@gmail.com
 2. Vadim Filippov Evgenevich - [@AksiLipe](https://t.me/AksiLipe) - Fill.123filippov@mail.ru
 3. Ilgam Bikmaev Isliamovich - [@ILGAMBIK](https://t.me/ILGAMBIK) - ilhambikmaev110@gmail.com
 4. Danila Tsigelnikov Alekseevich - [@tsigel24](https://t.me/tsigel24) - danila.tsigelnikov@mail.ru
