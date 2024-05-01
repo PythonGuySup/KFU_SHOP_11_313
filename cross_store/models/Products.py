@@ -7,7 +7,7 @@ class Products(models.Model):
     price = models.IntegerField(default=0)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products')
     description = models.TextField(blank=True, null=True)
-    image = models.ImageField(upload_to='uploads/products/', blank=True, null=True)
+    image = models.ImageField(upload_to='static/assets/img/preview/shop/', blank=True, null=True)
 
     @staticmethod
     def get_products_by_id(ids):
