@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth.hashers import make_password, check_password
 from .models.Customer import Customer
 from .middleware.auth import login_requested
-
+from .models import Products
+from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
@@ -65,3 +66,8 @@ def login(request):
 def logout(request):
     request.session.clear()
     return redirect('login')
+
+
+def shop(request):
+    products = Products.objects.all()
+    return render(request, 'shop.html', {'products': products})
