@@ -3,11 +3,11 @@ from .Category import Category
 
 
 class Products(models.Model):
-    name = models.CharField(max_length=60)
+    name = models.CharField(max_length=60, blank=True, null=True)
     price = models.IntegerField(default=0)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
-    description = models.CharField(max_length=250, default='', blank=True, null=True)
-    image = models.ImageField(upload_to='uploads/products/')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products')
+    description = models.TextField(blank=True, null=True)
+    image = models.ImageField(upload_to='uploads/products/', blank=True, null=True)
 
     @staticmethod
     def get_products_by_id(ids):
