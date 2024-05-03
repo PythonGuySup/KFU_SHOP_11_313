@@ -534,73 +534,64 @@
             <div class="container">
                 <h1 class="section-title">Внимание! Акция! <small>Отличное предложение</small></h1>
                 <div class="row latest-deals-row">
-
                     <!---->
                     <div class="col-sm-6">
-                        <div class="latest-deal">
+                        <div class="latest-deal">   
                             <div class="row">
-
-                                <!---->
-                                <div class="col-lg-8">
+                                <div class="col-lg-8"> 
                                     <div class="deal-media">
-                                        <img src="https://0d314c86-f76b-45cc-874e-45816116a667.selcdn.net/08b0ad25-9c62-454c-94b0-0dbacccb4335.jpg" alt="" class="img-responsive" style="object-fit: contain;">
+                                        <img src="{{ product.image }}" alt="" class="img-responsive" style="object-fit: contain;">
                                         <div class="countdown-wrapper">
                                             <div id="dealCountdown1" class="defaultCountdown clearfix"></div>
                                         </div>
                                     </div>
+                                    
                                 </div>
-                                <!---->
+                                
                                 <div class="col-lg-4">
                                     <div class="deal-about">
-                                        <div class="deal-title">Месть</div>
+                                        <div class="deal-title">Кроссовки</div>
                                         <div class="deal-availability">Статус: <span class="in-stock">Активен</span></div>
-                                        <div class="deal-description">Кроссовки “Месть”: Обувь для смелых и дерзких.</div>
+                                        <div class="deal-description">Кроссовки “Название”: Обувь для смелых и дерзких.</div>
                                         <div class="price">
-                                            <del>22 000</del>
-                                            <ins>14 000 р.</ins>
+                                            <del>15000</del>
+                                            <ins>8 000 р.</ins>
                                         </div>
                                     </div>
-                                </div>
-                                <!---->
-
+                                </div>              
                             </div>
                         </div>
                     </div>
-                    <!---->
-
-                    <!---->
+                    
                     <div class="col-sm-6">
                         <div class="latest-deal">
                             <div class="row">
-
-                                <!---->
-                                <div class="col-lg-8" style="object-fit: contain;">
+                                <div class="col-lg-8"> 
                                     <div class="deal-media">
-                                        <img src="https://0d314c86-f76b-45cc-874e-45816116a667.selcdn.net/6c4d4adb-2a5d-4642-97e7-9f141765c2fb.jpg" alt="" class="img-responsive">
+                                        <img src="{{ product.image }}" alt="" class="img-responsive" style="object-fit: contain;">
                                         <div class="countdown-wrapper">
-                                            <div id="dealCountdown2" class="defaultCountdown clearfix"></div>
+                                            <div id="dealCountdown1" class="defaultCountdown clearfix"></div>
                                         </div>
                                     </div>
+                                    
                                 </div>
-                                <!---->
+                                
                                 <div class="col-lg-4">
                                     <div class="deal-about">
-                                        <div class="deal-title">Sigma</div>
+                                        <div class="deal-title">Кроссовки</div>
                                         <div class="deal-availability">Статус: <span class="in-stock">Активен</span></div>
-                                        <div class="deal-description">Кроссовки Sigma: Стильные и функциональные.</div>
+                                        <div class="deal-description">Кроссовки “Название”: Обувь для смелых и дерзких.</div>
                                         <div class="price">
-                                            <del>13 000 р.</del>
-                                            <ins>8 500 р.</ins>
+                                            <del>15000</del>
+                                            <ins>8 000 р.</ins>
                                         </div>
                                     </div>
-                                </div>
-                                <!---->
-
+                                </div>              
                             </div>
                         </div>
                     </div>
+                    
                     <!---->
-
                 </div>
             </div>
         </section>
@@ -628,16 +619,16 @@
                     <!-- content -->
                     <section class="content col-sm-8 col-md-9">
                         <div class="row thumbnails products" style="margin: 20px;">
-                            {% for product in products %}
+                            {% for product in products_catalog %}
                             <div class="col-md-4 col-sm-6 col-xsp-6">
                                 <div class="thumbnail no-border no-padding">
-                                <div class="media">
-                                    <img src="https://cdn.urbanvibes.com/upload/mdm/media_content/resize/e67/2000_2000_332e/83678160299.jpg" alt="">
+                                <div class="media" style="height: 300px;">
+                                    <img src="{{product.image}}" alt="">
                                     <div class="caption hovered">
                                     <div class="caption-wrapper div-table">
                                         <div class="caption-inner div-cell">
                                         <p class="caption-buttons">
-                                            <a class="btn btn-theme caption-view-more" href="../../../../crosstore/shop-single.html">Подробнее</a>
+                                            <a class="btn btn-theme caption-view-more" href="#">Подробнее</a>
                                             <br class="clear">
                                             <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
                                         </p>

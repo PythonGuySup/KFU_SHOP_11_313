@@ -9,7 +9,7 @@ class Products(models.Model):
     description = models.TextField(blank=True, null=True)
     image = models.ImageField(upload_to='static/assets/img/preview/shop/', blank=True, null=True)
 
-    @staticmethod
+    @staticmethod   
     def get_products_by_id(ids):
         return Products.objects.filter(id__in=ids)
 
