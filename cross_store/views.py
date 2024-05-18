@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth.hashers import make_password, check_password
 from .models.Customer import Customer
 from .middleware.auth import login_requested
-
+from .models import Products
+from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
@@ -65,3 +66,17 @@ def login(request):
 def logout(request):
     request.session.clear()
     return redirect('login')
+
+
+def shop(request):
+    all_products = Products.objects.all()
+    products_hat = []
+    products_catalog = []
+
+    for i in range(0, len(all_products)):
+        if all_products[i].name in ['Месть', 'Sigma']:
+            products_hat.append(all_products[i])
+        else:
+            products_catalog.append(all_products[i])
+    print(products_hat)
+    return render(request, 'shop.html', {'all_products': all_products, 'product_hat': products_hat, 'products_catalog': products_catalog})
