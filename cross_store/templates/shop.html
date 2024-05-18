@@ -534,73 +534,64 @@
             <div class="container">
                 <h1 class="section-title">Внимание! Акция! <small>Отличное предложение</small></h1>
                 <div class="row latest-deals-row">
-
                     <!---->
                     <div class="col-sm-6">
-                        <div class="latest-deal">
+                        <div class="latest-deal">   
                             <div class="row">
-
-                                <!---->
-                                <div class="col-lg-8">
+                                <div class="col-lg-8"> 
                                     <div class="deal-media">
-                                        <img src="{% static 'assets\img\preview\shop\new_last-deal-1.jpg' %}" alt="" class="img-responsive">
+                                        <img src="{{ product.image }}" alt="" class="img-responsive" style="object-fit: contain;">
                                         <div class="countdown-wrapper">
                                             <div id="dealCountdown1" class="defaultCountdown clearfix"></div>
                                         </div>
                                     </div>
+                                    
                                 </div>
-                                <!---->
+                                
                                 <div class="col-lg-4">
                                     <div class="deal-about">
-                                        <div class="deal-title">Мужская обувь</div>
+                                        <div class="deal-title">Кроссовки</div>
                                         <div class="deal-availability">Статус: <span class="in-stock">Активен</span></div>
-                                        <div class="deal-description">Самые удобные, прекрасные, замечательные кроссовки со скидкой.</div>
+                                        <div class="deal-description">Кроссовки “Название”: Обувь для смелых и дерзких.</div>
                                         <div class="price">
-                                            <del>7 000 р.</del>
-                                            <ins>5 000 р.</ins>
+                                            <del>15000</del>
+                                            <ins>8 000 р.</ins>
                                         </div>
                                     </div>
-                                </div>
-                                <!---->
-
+                                </div>              
                             </div>
                         </div>
                     </div>
-                    <!---->
-
-                    <!---->
+                    
                     <div class="col-sm-6">
                         <div class="latest-deal">
                             <div class="row">
-
-                                <!---->
-                                <div class="col-lg-8">
+                                <div class="col-lg-8"> 
                                     <div class="deal-media">
-                                        <img src="{% static 'assets\img\preview\shop\new_last-deal-2.jpg' %}" alt="" class="img-responsive">
+                                        <img src="{{ product.image }}" alt="" class="img-responsive" style="object-fit: contain;">
                                         <div class="countdown-wrapper">
-                                            <div id="dealCountdown2" class="defaultCountdown clearfix"></div>
+                                            <div id="dealCountdown1" class="defaultCountdown clearfix"></div>
                                         </div>
                                     </div>
+                                    
                                 </div>
-                                <!---->
+                                
                                 <div class="col-lg-4">
                                     <div class="deal-about">
-                                        <div class="deal-title">Мужская обувь</div>
+                                        <div class="deal-title">Кроссовки</div>
                                         <div class="deal-availability">Статус: <span class="in-stock">Активен</span></div>
-                                        <div class="deal-description">Ещё одни самые удобные, прекрасные, замечательные кроссовки со скидкой.</div>
+                                        <div class="deal-description">Кроссовки “Название”: Обувь для смелых и дерзких.</div>
                                         <div class="price">
-                                            <del>7 000 р.</del>
-                                            <ins>5 000 р.</ins>
+                                            <del>15000</del>
+                                            <ins>8 000 р.</ins>
                                         </div>
                                     </div>
-                                </div>
-                                <!---->
-
+                                </div>              
                             </div>
                         </div>
                     </div>
+                    
                     <!---->
-
                 </div>
             </div>
         </section>
@@ -627,343 +618,37 @@
 
                     <!-- content -->
                     <section class="content col-sm-8 col-md-9">
-                        <div class="row thumbnails products">
+                        <div class="row thumbnails products" style="margin: 20px;">
+                            {% for product in products_catalog %}
                             <div class="col-md-4 col-sm-6 col-xsp-6">
                                 <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <img src="{% static 'assets\img\preview\shop\category-1.jpg' %}" alt="">
-                                        <div class="caption hovered">
-                                            <div class="caption-wrapper div-table">
-                                                <div class="caption-inner div-cell">
-                                                    <p class="caption-buttons">
-                                                        <a class="btn btn-theme caption-view-more" href="../../../../crosstore/shop-single.html">Подробнее</a>
-                                                        <br class="clear">
-                                                        <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
-                                                    </p>
-                                                </div>
-                                            </div>
+                                <div class="media" style="height: 300px;">
+                                    <img src="{{product.image}}" alt="">
+                                    <div class="caption hovered">
+                                    <div class="caption-wrapper div-table">
+                                        <div class="caption-inner div-cell">
+                                        <p class="caption-buttons">
+                                            <a class="btn btn-theme caption-view-more" href="#">Подробнее</a>
+                                            <br class="clear">
+                                            <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
+                                        </p>
                                         </div>
                                     </div>
-                                    <p class="caption-price"><span class="value">5 000 р.</span></p>
-                                    <div class="caption">
-                                        <h3 class="caption-title">Название товара </h3>
-                                    </div>
-                                    <div class="caption after-media">
-                                        <p class="caption-read-more">
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-heart"></i></a>
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-star"></i></a>
-                                        </p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xsp-6">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <img src="{% static 'assets\img\preview\shop\category-2.jpg' %}" alt="">
-                                        <div class="caption hovered">
-                                            <div class="caption-wrapper div-table">
-                                                <div class="caption-inner div-cell">
-                                                    <p class="caption-buttons">
-                                                        <a class="btn btn-theme caption-view-more" href="../../../../crosstore/shop-single.html">Подробнее</a>
-                                                        <br class="clear">
-                                                        <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="caption-price"><span class="value">5 000 р.</span></p>
-                                    <div class="caption">
-                                        <h3 class="caption-title">Название товара </h3>
-                                    </div>
-                                    <div class="caption after-media">
-                                        <p class="caption-read-more">
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-heart"></i></a>
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-star"></i></a>
-                                        </p>
-                                    </div>
+                                <p class="caption-price"><span class="value">{{ product.price }} р.</span></p>
+                                <div class="caption">
+                                    <h3 class="caption-title">{{ product.name }}</h3>
+                                </div>
+                                <div class="caption after-media">
+                                    <p class="caption-read-more">
+                                    <a class="btn btn-theme" href="#"><i class="fa fa-heart"></i></a>
+                                    <a class="btn btn-theme" href="#"><i class="fa fa-star"></i></a>
+                                    </p>
+                                </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 col-xsp-6">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <img src="{% static 'assets\img\preview\shop\category-3.jpg' %}" alt="">
-                                        <div class="caption hovered">
-                                            <div class="caption-wrapper div-table">
-                                                <div class="caption-inner div-cell">
-                                                    <p class="caption-buttons">
-                                                        <a class="btn btn-theme caption-view-more" href="../../../../crosstore/shop-single.html">Подробнее</a>
-                                                        <br class="clear">
-                                                        <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="caption-price"><span class="value">5 000 р.</span></p>
-                                    <div class="caption">
-                                        <h3 class="caption-title">Название товара </h3>
-                                    </div>
-                                    <div class="caption after-media">
-                                        <p class="caption-read-more">
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-heart"></i></a>
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-star"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xsp-6">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <img src="{% static 'assets\img\preview\shop\category-4.jpg' %}" alt="">
-                                        <div class="caption hovered">
-                                            <div class="caption-wrapper div-table">
-                                                <div class="caption-inner div-cell">
-                                                    <p class="caption-buttons">
-                                                        <a class="btn btn-theme caption-view-more" href="../../../../crosstore/shop-single.html">Подробнее</a>
-                                                        <br class="clear">
-                                                        <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="caption-price"><span class="value">5 000 р.</span></p>
-                                    <div class="caption">
-                                        <h3 class="caption-title">Название товара </h3>
-                                    </div>
-                                    <div class="caption after-media">
-                                        <p class="caption-read-more">
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-heart"></i></a>
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-star"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xsp-6">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <img src="{% static 'assets\img\preview\shop\category-5.jpg' %}" alt="">
-                                        <div class="caption hovered">
-                                            <div class="caption-wrapper div-table">
-                                                <div class="caption-inner div-cell">
-                                                    <p class="caption-buttons">
-                                                        <a class="btn btn-theme caption-view-more" href="../../../../crosstore/shop-single.html">Подробнее</a>
-                                                        <br class="clear">
-                                                        <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="caption-price"><span class="value">5 000 р.</span></p>
-                                    <div class="caption">
-                                        <h3 class="caption-title">Название товара </h3>
-                                    </div>
-                                    <div class="caption after-media">
-                                        <p class="caption-read-more">
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-heart"></i></a>
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-star"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xsp-6">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <img src="{% static 'assets\img\preview\shop\category-6.jpg' %}" alt="">
-                                        <div class="caption hovered">
-                                            <div class="caption-wrapper div-table">
-                                                <div class="caption-inner div-cell">
-                                                    <p class="caption-buttons">
-                                                        <a class="btn btn-theme caption-view-more" href="../../../../crosstore/shop-single.html">Подробнее</a>
-                                                        <br class="clear">
-                                                        <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="caption-price"><span class="value">5 000 р.</span></p>
-                                    <div class="caption">
-                                        <h3 class="caption-title">Название товара </h3>
-                                    </div>
-                                    <div class="caption after-media">
-                                        <p class="caption-read-more">
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-heart"></i></a>
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-star"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xsp-6">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <img src="{% static 'assets\img\preview\shop\category-7.jpg' %}" alt="">
-                                        <div class="caption hovered">
-                                            <div class="caption-wrapper div-table">
-                                                <div class="caption-inner div-cell">
-                                                    <p class="caption-buttons">
-                                                        <a class="btn btn-theme caption-view-more" href="../../../../crosstore/shop-single.html">Подробнее</a>
-                                                        <br class="clear">
-                                                        <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="caption-price"><span class="value">5 000 р.</span></p>
-                                    <div class="caption">
-                                        <h3 class="caption-title">Название товара </h3>
-                                    </div>
-                                    <div class="caption after-media">
-                                        <p class="caption-read-more">
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-heart"></i></a>
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-star"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xsp-6">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <img src="{% static 'assets\img\preview\shop\category-8.jpg' %}" alt="">
-                                        <div class="caption hovered">
-                                            <div class="caption-wrapper div-table">
-                                                <div class="caption-inner div-cell">
-                                                    <p class="caption-buttons">
-                                                        <a class="btn btn-theme caption-view-more" href="../../../../crosstore/shop-single.html">Подробнее</a>
-                                                        <br class="clear">
-                                                        <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="caption-price"><span class="value">5 000 р.</span></p>
-                                    <div class="caption">
-                                        <h3 class="caption-title">Название товара </h3>
-                                    </div>
-                                    <div class="caption after-media">
-                                        <p class="caption-read-more">
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-heart"></i></a>
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-star"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xsp-6">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <img src="{% static 'assets\img\preview\shop\category-5.jpg' %}" alt="">
-                                        <div class="caption hovered">
-                                            <div class="caption-wrapper div-table">
-                                                <div class="caption-inner div-cell">
-                                                    <p class="caption-buttons">
-                                                        <a class="btn btn-theme caption-view-more" href="../../../../crosstore/shop-single.html">Подробнее</a>
-                                                        <br class="clear">
-                                                        <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="caption-price"><span class="value">5 000 р.</span></p>
-                                    <div class="caption">
-                                        <h3 class="caption-title">Название товара </h3>
-                                    </div>
-                                    <div class="caption after-media">
-                                        <p class="caption-read-more">
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-heart"></i></a>
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-star"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xsp-6">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <img src="{% static 'assets\img\preview\shop\category-2.jpg' %}" alt="">
-                                        <div class="caption hovered">
-                                            <div class="caption-wrapper div-table">
-                                                <div class="caption-inner div-cell">
-                                                    <p class="caption-buttons">
-                                                        <a class="btn btn-theme caption-view-more" href="../../../../crosstore/shop-single.html">Подробнее</a>
-                                                        <br class="clear">
-                                                        <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="caption-price"><span class="value">5 000 р.</span></p>
-                                    <div class="caption">
-                                        <h3 class="caption-title">Название товара </h3>
-                                    </div>
-                                    <div class="caption after-media">
-                                        <p class="caption-read-more">
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-heart"></i></a>
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-star"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xsp-6">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <img src="{% static 'assets\img\preview\shop\category-3.jpg' %}" alt="">
-                                        <div class="caption hovered">
-                                            <div class="caption-wrapper div-table">
-                                                <div class="caption-inner div-cell">
-                                                    <p class="caption-buttons">
-                                                        <a class="btn btn-theme caption-view-more" href="../../../../crosstore/shop-single.html">Подробнее</a>
-                                                        <br class="clear">
-                                                        <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="caption-price"><span class="value">5 000 р.</span></p>
-                                    <div class="caption">
-                                        <h3 class="caption-title">Название товара </h3>
-                                    </div>
-                                    <div class="caption after-media">
-                                        <p class="caption-read-more">
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-heart"></i></a>
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-star"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xsp-6">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <img src="{% static 'assets\img\preview\shop\category-7.jpg' %}" alt="">
-                                        <div class="caption hovered">
-                                            <div class="caption-wrapper div-table">
-                                                <div class="caption-inner div-cell">
-                                                    <p class="caption-buttons">
-                                                        <a class="btn btn-theme caption-view-more" href="../../../../crosstore/shop-single.html">Подробнее</a>
-                                                        <br class="clear">
-                                                        <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="caption-price"><span class="value">5 000 р.</span></p>
-                                    <div class="caption">
-                                        <h3 class="caption-title">Название товара </h3>
-                                    </div>
-                                    <div class="caption after-media">
-                                        <p class="caption-read-more">
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-heart"></i></a>
-                                            <a class="btn btn-theme" href="#"><i class="fa fa-star"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
 
                         <!-- Pagination -->
@@ -1111,10 +796,10 @@
                             <h3 class="widget-title">Рассылка</h3>
                             <p>Подпишитесь на рассылку новостей и акций. </p>
                             <form id="subscribe" name="subscribe-form" class="subscribe-form" action="#" method="post">
-                                <div class="form-group">
+                                <div class="form-group  ">
                                     <input type="text" class="form-control input-name" data-toggle="tooltip" title="Mail is required" placeholder="Введите почту..">
                                 </div>
-                                <button class="btn btn-theme submit-button" type="submit">Готово</button>
+                                <button class="btn btn-theme submit-button" type="submit">Ок</button>
                             </form>
                             <div class="clearfix">
                                 <ul class="social-line list-inline">
