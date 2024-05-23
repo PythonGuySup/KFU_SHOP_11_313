@@ -5,6 +5,7 @@ from .middleware.auth import login_requested
 from .models import Products
 from django.http import JsonResponse
 
+
 # Create your views here.
 def index(request):
     return render(request, "index.html")
@@ -68,16 +69,22 @@ def logout(request):
     return redirect('login')
 
 
-def shop(request):
-    all_products = Products.objects.all()
+def shop(request, page=1):
+    page = int(page)
+    product_quantity_at_page = 11
+    product_quantity = Products.objects.all().count()
+    products = Products.objects.filter(id__range=(product_quantity_at_page * (page - 1) + 1, product_quantity_at_page * page))
     products_hat = []
     products_catalog = []
 
-    for i in range(0, len(all_products)):
-        if all_products[i].name in ['Месть', 'Sigma']:
-            products_hat.append(all_products[i])
+    for i in range(0, len(products)):
+        if products[i].name not in ["Месть", "Sigma"]:
+            products_catalog.append(products[i])
+            print("***", products[i].name)
 
-        else:
-            products_catalog.append(all_products[i])
-    print("DDDD", *products_hat)
-    return render(request, 'shop.html', {'all_products': all_products, 'product_hat': products_hat, 'products_catalog': products_catalog})
+    products_hat.append(Products.objects.get(name="Месть"))
+    products_hat.append(Products.objects.get(name="Sigma"))
+
+    return render(request, 'shop.html',
+                  {'all_products': products, 'number_of_sublist': range(1, (product_quantity // 9) + 1),
+                   'product_hat': products_hat, 'products_catalog': products_catalog, 'current_page': page})

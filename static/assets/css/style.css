@@ -1798,7 +1798,7 @@ textarea {
     background-color: transparent;
     border-color: transparent;
     border: none;
-    width: 100%;
+    width: 100%
 }
 .countdown-row {
     overflow: hidden;
@@ -2393,7 +2393,6 @@ textarea {
 .pagination > li:last-child > a,
 .pagination > li:last-child > span {
     border-radius: 0;
-    background-color: #eeeeee
 }
 .pagination > li > a,
 .pagination > li > span {

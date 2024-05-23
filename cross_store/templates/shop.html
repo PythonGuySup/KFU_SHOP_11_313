@@ -540,10 +540,10 @@
                             <div class="row">
                                 <div class="col-lg-8"> 
                                     <div class="deal-media">
-                                        <img src="{{ product_hat.0.image }}" alt="" class="img-responsive" style="object-fit: contain;">
+                                        <img src="{% static product_hat.0.image %}" alt="" class="img-responsive" style="object-fit: contain;">
                                         <div class="countdown-wrapper">
                                             <div id="dealCountdown1" class="defaultCountdown clearfix"></div>
-                                        </div>
+                                        </div>pa
                                     </div>
                                     
                                 </div>
@@ -568,7 +568,7 @@
                             <div class="row">
                                 <div class="col-lg-8"> 
                                     <div class="deal-media">
-                                        <img src="{{ product_hat.1.image }}" alt="" class="img-responsive" style="object-fit: contain;">
+                                        <img src="{% static product_hat.1.image %}" alt="" class="img-responsive" style="object-fit: contain;">
                                         <div class="countdown-wrapper">
                                             <div id="dealCountdown1" class="defaultCountdown clearfix"></div>
                                         </div>
@@ -623,7 +623,7 @@
                             <div class="col-md-4 col-sm-6 col-xsp-6">
                                 <div class="thumbnail no-border no-padding">
                                 <div class="media" style="height: 300px;">
-                                    <img src="{{product.image}}" alt="">
+                                    <img src="{%  static product.image %}" alt="">
                                     <div class="caption hovered">
                                     <div class="caption-wrapper div-table">
                                         <div class="caption-inner div-cell">
@@ -633,7 +633,7 @@
                                             <a class="btn btn-theme caption-add-to-cart" href="#">В корзину</a>
                                         </p>
                                         </div>
-                                    </div>F
+                                    </div>
                                     </div>
                                 </div>
                                 <p class="caption-price"><span class="value">{{ product.price }} р.</span></p>
@@ -655,11 +655,13 @@
                         <div class="pagination-wrapper">
                             <ul class="pagination">
                                 <li class="disabled"><a href="#">«</a></li>
-                                <li class="active"><a href="#">1 <span class="sr-only">(я здесь)</span></a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">»</a></li>
+                                {% for i in number_of_sublist %}
+                                    {% if current_page == i %}
+                                        <li class="active"><a href= {% url 'shop_with_page' page=i %}>{{ i }} </a></li>
+                                    {% else %}
+                                        <li><a href= {% url 'shop_with_page' page=i %}>{{ i }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
                             </ul>
                         </div>
                         <!-- /Pagination -->
