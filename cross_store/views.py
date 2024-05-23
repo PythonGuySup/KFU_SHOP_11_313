@@ -76,7 +76,8 @@ def shop(request):
     for i in range(0, len(all_products)):
         if all_products[i].name in ['Месть', 'Sigma']:
             products_hat.append(all_products[i])
+
         else:
             products_catalog.append(all_products[i])
-    print(products_hat)
+    print("DDDD", *products_hat)
     return render(request, 'shop.html', {'all_products': all_products, 'product_hat': products_hat, 'products_catalog': products_catalog})
